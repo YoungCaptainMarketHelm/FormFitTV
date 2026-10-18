@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormFitTV.MainPage"
+             BackgroundColor="#0D0D0D">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="60,40" Spacing="30">
+
+            <Label Text="FormFit TV"
+                   FontSize="48"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+
+            <Label Text="AI Form-Correcting Fitness Coach"
+                   FontSize="22"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20" />
+
+            <FlexLayout Direction="Row"
+                        Wrap="Wrap"
+                        JustifyContent="Center"
+                        AlignItems="Center">
+
+                <Border x:Name="SquatCard"
+                        Stroke="#333333"
+                        StrokeThickness="4"
+                        StrokeShape="RoundRectangle 20"
+                        BackgroundColor="#1A1A1A"
+                        Padding="30"
+                        Margin="20"
+                        WidthRequest="320"
+                        HeightRequest="220">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSquatTapped" />
+                    </Border.GestureRecognizers>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1.06" />
+                                        <Setter Property="Stroke" Value="#00E5FF" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <VerticalStackLayout Spacing="12" VerticalOptions="Center">
+                        <Label Text="Squat"
+                               FontSize="32"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="Center" />
+                        <Label Text="Build legs and core"
+                               FontSize="18"
+                               TextColor="#BBBBBB"
+                               HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border x:Name="PushupCard"
+                        Stroke="#333333"
+                        StrokeThickness="4"
+                        StrokeShape="RoundRectangle 20"
+                        BackgroundColor="#1A1A1A"
+                        Padding="30"
+                        Margin="20"
+                        WidthRequest="320"
+                        HeightRequest="220">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPushupTapped" />
+                    </Border.GestureRecognizers>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1.06" />
+                                        <Setter Property="Stroke" Value="#00E5FF" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <VerticalStackLayout Spacing="12" VerticalOptions="Center">
+                        <Label Text="Push-up"
+                               FontSize="32"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="Center" />
+                        <Label Text="Upper body strength"
+                               FontSize="18"
+                               TextColor="#BBBBBB"
+                               HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border x:Name="PlankCard"
+                        Stroke="#333333"
+                        StrokeThickness="4"
+                        StrokeShape="RoundRectangle 20"
+                        BackgroundColor="#1A1A1A"
+                        Padding="30"
+                        Margin="20"
+                        WidthRequest="320"
+                        HeightRequest="220">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPlankTapped" />
+                    </Border.GestureRecognizers>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1.06" />
+                                        <Setter Property="Stroke" Value="#00E5FF" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <VerticalStackLayout Spacing="12" VerticalOptions="Center">
+                        <Label Text="Plank"
+                               FontSize="32"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="Center" />
+                        <Label Text="Core stability"
+                               FontSize="18"
+                               TextColor="#BBBBBB"
+                               HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </FlexLayout>
+
+            <Label Text="Tap a card to start"
+                   FontSize="16"
+                   TextColor="#666666"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
