@@ -16,8 +16,8 @@ public class BedrockCoachService
         try
         {
             _client = new AmazonBedrockRuntimeClient(
-                "AKIA6ITMK2FPSJAVJID6",      // put new key here only on your machine
-                "qx4YpahiUcY4/OKFuEK6aiBMEW9JlDIytYmqJm/x",
+                "Access key",      // put new key here only on your machine
+                "Secret access key",
                 RegionEndpoint.EUNorth1);
         }
         catch
